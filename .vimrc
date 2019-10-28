@@ -50,10 +50,8 @@ let g:lightline = {'colorscheme': 'jellybeans'}
 "let g:lightline = {'colorscheme': 'wombat'}
 "let g:lightline = {'colorscheme': 'seoul256'}
 "let g:lightline = {'colorscheme': 'Tomorrow_Night_Bright'}
-"
-"set list listchars=tab:\:\ ,trail:·,extends:»,precedes:«,nbsp:×
-set listchars=tab:▸\ ,extends:❯,precedes:❮,nbsp:␣,eol:→
-"set listchars=tab:⇥\ ,nbsp:·,trail:␣,extends:▸,precedes:◂
+
+set list listchars=tab:\:\ ,trail:·,extends:»,precedes:«,nbsp:×
 
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
