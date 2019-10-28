@@ -9,14 +9,16 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
-Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'itchyny/lightline.vim'
+Plugin 'tpope/vim-sensible'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax on
 set number
 set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set autoindent
 set shortmess+=I
 set autochdir
@@ -25,17 +27,27 @@ set nobackup
 set noundofile
 set showmatch
 set expandtab
-set shiftwidth=4
 set laststatus=2
 set noshowmode
 set cursorline
+set incsearch
+set showmatch
+set ignorecase
+set smartcase
 
-"colorscheme 256_noir
-" Change highlighting of cursor line when entering/leaving Insert Mode
-"highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#121212
-"autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
-"autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 guifg=NONE guibg=#121212
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
 
-set t_Co=256
-colorscheme PaperColor
-set background=dark
+colorscheme substrata
+
+let g:lightline = {'colorscheme': 'jellybeans'}
+"let g:lightline = {'colorscheme': 'darcula'}
+"let g:lightline = {'colorscheme': 'wombat'}
+"let g:lightline = {'colorscheme': 'seoul256'}
+"let g:lightline = {'colorscheme': 'Tomorrow_Night_Bright'}
+"
+"set list listchars=tab:\|\ ,trail:·,extends:»,precedes:«,nbsp:×
+set listchars=tab:▸\ ,extends:❯,precedes:❮,nbsp:␣,eol:→
+"set listchars=tab:⇥\ ,nbsp:·,trail:␣,extends:▸,precedes:◂
+"set list listchars=tab:»¯,trail:°,extends:»,precedes:«
+"highlight NonText ctermfg=DarkRed
