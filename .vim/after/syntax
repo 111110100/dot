@@ -26,7 +26,3 @@ autocmd! bufreadpost * set noexpandtab | retab! 4
 autocmd! bufwritepre * set expandtab | retab! 4
 autocmd! bufwritepost * set noexpandtab | retab! 4
 hi SpecialKey cterm=NONE ctermfg=238 ctermbg=16 gui=NONE guifg=#585858 guibg=#000000
-
-if has("autocmd")
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
