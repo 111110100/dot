@@ -51,3 +51,7 @@ set listchars=tab:▸\ ,extends:❯,precedes:❮,nbsp:␣,eol:→
 "set listchars=tab:⇥\ ,nbsp:·,trail:␣,extends:▸,precedes:◂
 "set list listchars=tab:»¯,trail:°,extends:»,precedes:«
 "highlight NonText ctermfg=DarkRed
+
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
