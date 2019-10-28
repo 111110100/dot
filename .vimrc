@@ -11,6 +11,8 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
 Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-sensible'
+Plugin 'arzg/vim-substrata'
+Plugin 'andreasvc/vim-256noir'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
