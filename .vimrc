@@ -16,6 +16,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'arzg/vim-substrata'
 Plugin 'andreasvc/vim-256noir'
+Plugin 'chr4/nginx.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
