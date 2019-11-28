@@ -22,9 +22,9 @@ filetype plugin indent on    " required
 
 syntax on
 set number
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set autoindent
 set shortmess+=I
 set autochdir
@@ -53,9 +53,9 @@ let g:lightline = {'colorscheme': 'jellybeans'}
 "let g:lightline = {'colorscheme': 'Tomorrow_Night_Bright'}
 
 set list listchars=tab:\·\ ,trail:·,extends:»,precedes:«,nbsp:×
-autocmd! bufreadpost * set noexpandtab | retab! 4
-autocmd! bufwritepre * set expandtab | retab! 4
-autocmd! bufwritepost * set noexpandtab | retab! 4
+autocmd! bufreadpost * set noexpandtab | retab! 2
+autocmd! bufwritepre * set expandtab | retab! 2
+autocmd! bufwritepost * set noexpandtab | retab! 2
 
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
