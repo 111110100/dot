@@ -46,7 +46,7 @@ set smartcase
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 
-colorscheme substrata
+colorscheme 256_noir
 
 let g:lightline = {'colorscheme': 'jellybeans'}
 "let g:lightline = {'colorscheme': 'darcula'}
