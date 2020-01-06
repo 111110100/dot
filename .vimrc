@@ -9,7 +9,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
 Plugin 'itchyny/lightline.vim'
