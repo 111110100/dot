@@ -8,11 +8,11 @@ autocmd! bufreadpost * set noexpandtab | retab! 4
 autocmd! bufwritepre * set expandtab | retab! 4
 autocmd! bufwritepost * set noexpandtab | retab! 4
 
-colorscheme 256_noir
-highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#121212
-highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#121212
-autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
-autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#121212
+"colorscheme 256_noir
+"highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#121212
+"highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#121212
+"autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
+"autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#121212
 
 syn keyword pythonTrue True
 highlight def link pythonTrue Number
@@ -31,8 +31,5 @@ if s:t_Co >= 256
     "hi SpecialKey cterm=NONE ctermfg=240 ctermbg=16 gui=NONE guifg=#bcbcbc guibg=#000009
 endif
 
-set list listchars=tab:\:\ ,trail:·,extends:»,precedes:«,nbsp:×
-autocmd! bufreadpost * set noexpandtab | retab! 4
-autocmd! bufwritepre * set expandtab | retab! 4
-autocmd! bufwritepost * set noexpandtab | retab! 4
-hi SpecialKey cterm=NONE ctermfg=238 ctermbg=16 gui=NONE guifg=#585858 guibg=#000000
+"set list listchars=tab:\:\ ,trail:·,extends:»,precedes:«,nbsp:×
+"hi SpecialKey cterm=NONE ctermfg=238 ctermbg=16 gui=NONE guifg=#585858 guibg=#000000
