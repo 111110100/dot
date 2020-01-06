@@ -62,3 +62,7 @@ autocmd! bufwritepost * set noexpandtab | retab! 2
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" run this first: pip3 install --user --upgrade pynvim
+" Use deoplete:
+let g:deoplete#enable_at_startup = 1
