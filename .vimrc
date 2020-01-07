@@ -12,7 +12,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
 Plugin 'itchyny/lightline.vim'
-Plugin 'arzg/vim-substrata'
 Plugin 'andreasvc/vim-256noir'
 Plugin 'chr4/nginx.vim'
 call vundle#end()            " required
