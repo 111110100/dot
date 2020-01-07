@@ -40,8 +40,6 @@ set encoding=utf-8
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 
-"colorscheme substrata
-"colorscheme apprentice
 colorscheme 256_noir
 "256_noir stuff
 highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#121212
