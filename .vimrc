@@ -30,6 +30,7 @@ set showmatch
 set expandtab
 set laststatus=2
 set noshowmode
+"set cursorcolumn
 set cursorline
 set incsearch
 set showmatch
@@ -46,6 +47,8 @@ highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#12121
 highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#121212
 autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1c1c1c
 autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#121212
+"autocmd InsertEnter * highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE
+"autocmd InsertLeave * highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=237 guifg=NONE guibg=#121212
 
 let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 let s:italics = (((&t_ZH != '' && &t_ZH != '^[[7m') || has('gui_running')) && !has('iOS')) || has('nvim')
@@ -67,8 +70,8 @@ let g:lightline = {'colorscheme': 'jellybeans'}
 "let g:lightline = {'colorscheme': 'Tomorrow_Night_Bright'}
 "let g:lightline = {'colorscheme': 'srcery_drk'}
 
-set list listchars=tab:\·\ ,trail:·,extends:»,precedes:«,nbsp:×
-"set list listchars=tab:\:\ ,trail:·,extends:»,precedes:«,nbsp:×
+set list listchars=tab:\ \ ,trail:·,extends:»,precedes:«,nbsp:×
+"set list listchars=tab:\.\ ,trail:·,extends:»,precedes:«,nbsp:×
 autocmd! bufreadpost * set noexpandtab | retab! 2
 autocmd! bufwritepre * set expandtab | retab! 2
 autocmd! bufwritepost * set noexpandtab | retab! 2
@@ -76,3 +79,6 @@ autocmd! bufwritepost * set noexpandtab | retab! 2
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+nnoremap ;; :set cursorcolumn<cr>
+nnoremap ,, :set nocursorcolumn<cr>
