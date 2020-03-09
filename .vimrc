@@ -9,8 +9,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'ervandew/supertab'
-Plugin 'jiangmiao/auto-pairs'
+"Plugin 'ervandew/supertab'
+"Plugin 'jiangmiao/auto-pairs'
 Plugin 'itchyny/lightline.vim'
 Plugin 'andreasvc/vim-256noir'
 call vundle#end()             "required
