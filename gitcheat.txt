@@ -1,0 +1,12 @@
+git init
+[create .gitignore]
+git add .
+[make small commits]
+git commit -m "blah blah"
+[display current branch]
+git branch
+[branch off]
+git checkout -b [branch_name]
+[merging]
+git checkout -b master
+git merge [branch_name]
