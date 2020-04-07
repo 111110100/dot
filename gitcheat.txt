@@ -1,4 +1,7 @@
+[initialize git]
 git init
+[setup git author]
+git config --global --edit
 [create .gitignore]
 git add .
 [make small commits]
