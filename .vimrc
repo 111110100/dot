@@ -13,7 +13,6 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'hdima/python-syntax'
 Plugin 'zxqfl/tabnine-vim'
 Plugin 'rafi/awesome-vim-colorschemes'
-Plugin 'tmsvg/pear-tree'
 call vundle#end()             "required
 filetype plugin indent on     "required
 
