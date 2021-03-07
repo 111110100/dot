@@ -14,8 +14,6 @@ Plugin 'arcticicestudio/nord-vim'
 call vundle#end()             "required
 filetype plugin indent on     "required
 
-let g:rainbow_active = 1
-
 syntax on
 set number
 set tabstop=4
