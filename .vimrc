@@ -10,9 +10,11 @@ call vundle#begin()
 "let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
-Plugin 'arcticicestudio/nord-vim'
-call vundle#end()             "required
-filetype plugin indent on     "required
+Plugin 'tek256/simple-dark'
+Plugin 'luochen1990/rainbow'
+Plugin 'ervandew/supertab'
+call vundle#end()          "required
+filetype plugin indent on  "required
 
 syntax on
 set number
@@ -37,23 +39,22 @@ set smartcase
 set encoding=utf-8
 set relativenumber
 
-let python_highlight_all = 1
-
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 
-colorscheme nord
-let g:lightline = { 'colorscheme': 'nord' }
+colorscheme simple-dark
 let g:lightline = {
-    \ 'colorscheme': 'nord',
-    \ 'separator': {'left': "\ue0b0", 'right': "\ue0b2"},
-    \ 'subseparator': { 'left': '\ue0b1', 'right': '\ue0b3'}
-    \ }
+        \ 'colorscheme': 'seoul256',
+        \ 'separator': {'left': "\ue0b0", 'right': "\ue0b2"},
+        \ 'subseparator': { 'left': '\ue0b1', 'right': '\ue0b3'}
+        \ }
+
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 autocmd! bufreadpost * set noexpandtab | retab! 2
 autocmd! bufwritepre * set expandtab | retab! 2
 autocmd! bufwritepost * set noexpandtab | retab! 2
 
 if has("autocmd")
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+        au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
