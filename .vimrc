@@ -10,9 +10,8 @@ call vundle#begin()
 "let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
-Plugin 'tek256/simple-dark'
 Plugin 'luochen1990/rainbow'
-Plugin 'ervandew/supertab'
+Plugin 'andreasvc/vim-256noir'
 call vundle#end()          "required
 filetype plugin indent on  "required
 
@@ -42,7 +41,7 @@ set relativenumber
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 
-colorscheme simple-dark
+colorscheme 256_noir
 let g:lightline = {
         \ 'colorscheme': 'seoul256',
         \ 'separator': {'left': "\ue0b0", 'right': "\ue0b2"},
@@ -51,9 +50,9 @@ let g:lightline = {
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
-autocmd! bufreadpost * set noexpandtab | retab! 2
-autocmd! bufwritepre * set expandtab | retab! 2
-autocmd! bufwritepost * set noexpandtab | retab! 2
+autocmd! bufreadpost * set noexpandtab | retab! 4
+autocmd! bufwritepre * set expandtab | retab! 4
+autocmd! bufwritepost * set noexpandtab | retab! 4
 
 if has("autocmd")
         au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
