@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'luochen1990/rainbow'
 Plugin 'andreasvc/vim-256noir'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()          "required
 filetype plugin indent on  "required
 
@@ -41,11 +42,27 @@ set relativenumber
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 
+function MyFugitiveHead()
+  let head = FugitiveHead()
+  if head != ""
+    let head = "\uf126 " .. head
+  endif
+  return head
+endfunction
+
 colorscheme 256_noir
 let g:lightline = {
-        \ 'colorscheme': 'seoul256',
+        "\ 'colorscheme': 'seoul256',
+        \ 'colorscheme': 'powerlineish',
         \ 'separator': {'left': "\ue0b0", 'right': "\ue0b2"},
-        \ 'subseparator': { 'left': '\ue0b1', 'right': '\ue0b3'}
+        \ 'subseparator': { 'left': '\ue0b1', 'right': '\ue0b3'},
+        \ 'active': {
+        \   'left': [ [ 'mode', 'paste' ],
+        \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+        \ },
+        \ 'component_function': {
+        \   'gitbranch': 'MyFugitiveHead'
+        \ },
         \ }
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
