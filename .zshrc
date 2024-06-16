@@ -115,3 +115,5 @@ alias fzfprv="fzf --preview='cat {}'"
 # Shell integration for zsh
 eval "$(fzf --zsh)"
 
+# fvim
+alias fv="fzf --print0 | xargs -0 -o vim"
