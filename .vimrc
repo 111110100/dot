@@ -13,6 +13,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'luochen1990/rainbow'
 Plugin 'andreasvc/vim-256noir'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ghifarit53/tokyonight-vim'
 call vundle#end()          "required
 filetype plugin indent on  "required
 
@@ -50,10 +51,19 @@ function MyFugitiveHead()
   return head
 endfunction
 
-colorscheme 256_noir
+"colorscheme 256_noir
+"TokyoNight
+set termguicolors
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
+"TokyoNight
 let g:lightline = {
         "\ 'colorscheme': 'seoul256',
-        \ 'colorscheme': 'powerlineish',
+        "\ 'colorscheme': 'powerlineish',
+        \ 'colorscheme': 'tokyonight',
         \ 'separator': {'left': "\ue0b0", 'right': "\ue0b2"},
         \ 'subseparator': { 'left': '\ue0b1', 'right': '\ue0b3'},
         \ 'active': {
