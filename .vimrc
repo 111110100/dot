@@ -39,6 +39,7 @@ set ignorecase
 set smartcase
 set encoding=utf-8
 set relativenumber
+set belloff=all
 
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
