@@ -89,7 +89,11 @@ if has("autocmd")
 endif
 
 "vim-table-mode
+<<<<<<< HEAD
 let g:table_mode_corner_corner='+'
+=======
+let g:table_mode_corner_corner='|'
+>>>>>>> 46d6834 (Updated table_mode_corner to be markdown compatible)
 
 function! s:isAtStartOfLine(mapping)
   let text_before_cursor = getline('.')[0 : col('.')-1]
